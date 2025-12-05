@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="DoVer: Intervention-Driven Auto Debugging for LLM Multi-Agent Systems.">
+  <meta name="keywords" content="DoVer, LLM, multi-agent systems, debugging, intervention">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DoVer: Intervention-Driven Auto Debugging for LLM Multi-Agent Systems</title>
+
+  <!-- 字体和简单样式（可保留，也可以以后再精简） -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+</head>
+
+<body>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- 标题 -->
+    <h1 class="title is-2 has-text-centered">
+      DoVer: Intervention-Driven Auto Debugging for LLM Multi-Agent Systems
+    </h1>
+
+    <div class="content has-text-centered is-size-5">
+      <!-- 作者 -->
+      <p>
+        Ming Ma<sup>1,2*</sup>,
+        Jue Zhang<sup>3†</sup>,
+        Fangkai Yang<sup>3†</sup>,<br>
+        Yu Kang<sup>3</sup>,
+        Qingwei Lin<sup>3</sup>,
+        Saravan Rajmohan<sup>3</sup>,
+        Dongmei Zhang<sup>3</sup>
+      </p>
+    
+      <!-- 单位 -->
+      <p>
+        <sup>1</sup> Institute of Neuroscience, Chinese Academy of Sciences, Shanghai, China<br>
+        <sup>2</sup> University of Chinese Academy of Sciences<br>
+        <sup>3</sup> Microsoft
+      </p>
+    
+      <!-- 备注和邮箱 -->
+      <p class="is-size-6">
+        * Work is done during an internship at Microsoft. &nbsp;
+        † Corresponding authors.
+      </p>
+      <p class="is-size-6">
+        mam2022@ion.ac.cn;&nbsp;
+        {juezhang, fangkaiyang}@microsoft.com
+      </p>
+    </div>
+
+    <!-- 链接按钮：只保留 arXiv 和 Code -->
+    <div class="has-text-centered" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+      <span class="link-block" style="margin-right: 0.5rem;">
+        <a class="button is-normal is-rounded is-dark" disabled>
+          <span class="icon">
+            <i class="ai ai-arxiv"></i>
+          </span>
+          <span>arXiv (Coming Soon)</span>
+        </a>
+      </span>
+
+      <span class="link-block">
+        <a class="button is-normal is-rounded is-dark" disabled>
+          <span class="icon">
+            <i class="fab fa-github"></i>
+          </span>
+          <span>Code (Coming Soon)</span>
+        </a>
+      </span>
+    </div>
+
+    <hr>
+
+    <!-- Abstract -->
+    <div class="content">
+      <h2 class="title is-4">Abstract</h2>
+      <p>
+        Large language model (LLM)-based multi-agent systems are challenging to debug because failures often arise from long, branching interaction traces. The prevailing practice is to leverage LLMs for log-based failure localization, attributing errors to a specific agent and step. However, this paradigm has two key limitations: (i) log-only debugging lacks validation, producing untested hypotheses, and (ii) single-step or single-agent attribution is often ill-posed, as we find that multiple distinct interventions can independently repair the failed task.
+      </p>
+      <p>
+        To address the first limitation, we introduce <b>DoVer</b>, an intervention-driven debugging framework, which augments hypothesis generation with active verification through targeted interventions (e.g., editing messages, altering plans). For the second limitation, rather than evaluating on attribution accuracy, we focus on measuring whether the system resolves the failure or makes quantifiable progress toward task success, reflecting a more outcome-oriented view of debugging.
+      </p>
+      <p>
+        On the datasets derived from GAIA and AssistantBench, DoVer flips 18–28% of failed trials into successes, achieves up to 16% milestone progress, and validates or refutes 30–60% of failure hypotheses. Our findings highlight intervention as a practical mechanism for improving reliability in agentic systems and open opportunities for more robust, scalable debugging methods for LLM-based multi-agent systems.
+      </p>
+    </div>
+
+    <hr>
+
+    <!-- Video 占位 -->
+    <div class="content">
+      <h2 class="title is-4">Video</h2>
+      <p>
+        A short walkthrough of DoVer's intervention-driven debugging workflow.
+      </p>
+      <div class="has-text-centered">
+        <video controls playsinline preload="metadata" style="max-width: 100%; border-radius: 10px;">
+          <source src="./static/videos/DoVer_Pre.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- BibTeX 占位，可以等你确定后再改 -->
+    <div class="content" id="BibTeX">
+      <h2 class="title is-4">BibTeX</h2>
+      <pre><code>@article{ma2025dover,
+  author  = {Ming Ma and Jue Zhang and Fangkai Yang and Yu Kang and
+             Qingwei Lin and Saravan Rajmohan and Dongmei Zhang},
+  title   = {DoVer: Intervention-Driven Auto Debugging for LLM Multi-Agent Systems},
+  journal = {under review},
+  year    = {2025},
+}</code></pre>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered is-size-7">
+      <p>
+        Website template adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+        This website is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          Creative Commons Attribution-ShareAlike 4.0 International License
+        </a>.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- 为了按钮图标正常显示，需要 fontawesome 和 academicons（可选） -->
+<script defer src="./static/js/fontawesome.all.min.js"></
